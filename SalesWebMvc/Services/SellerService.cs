@@ -19,5 +19,11 @@ namespace SalesWebMvc.Services
         {
             return _context.Seller.ToList(); // Access the data source (database) of the sellers table and convert to a list
         }
+
+        public void Insert(Seller obj)
+        {
+            _context.Add(obj);
+            _context.SaveChanges();
+        }
     }
 }
